@@ -1,0 +1,15 @@
+.env
+.venv/
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Личные данные: экспорт переписки, датасеты, персона и авторизации
+data/*
+!data/.gitkeep
+!data/*.example.txt
+export/
+*.gguf
+
+runs/

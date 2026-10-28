@@ -1,0 +1,18 @@
+# Дообученная Qwen3-14B. Сборка (из папки models): ollama create neunizhayka-14b -f Modelfile.14b
+FROM ./neunizhayka-14b-q4_k_m.gguf
+
+# Чат-шаблон Qwen3 без рассуждений — тот же, на котором шло обучение (enable_thinking=False).
+TEMPLATE """{{- range .Messages }}<|im_start|>{{ .Role }}
+{{ .Content }}<|im_end|>
+{{ end }}<|im_start|>assistant
+<think>
+
+</think>
+
+"""
+
+PARAMETER stop "<|im_end|>"
+PARAMETER stop "<|im_start|>"
+PARAMETER temperature 0.7
+PARAMETER top_p 0.9
+PARAMETER num_ctx 4096
