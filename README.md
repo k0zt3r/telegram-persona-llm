@@ -12,6 +12,7 @@
 ![Ollama](https://img.shields.io/badge/Ollama-local_LLM-000000?logo=ollama&logoColor=white)
 ![Qwen3](https://img.shields.io/badge/model-Qwen3_QLoRA-7B3FE4)
 ![Unsloth](https://img.shields.io/badge/fine--tune-Unsloth-1BA672)
+![License](https://img.shields.io/badge/license-MIT-green)
 
 </div>
 
@@ -271,3 +272,7 @@ data/                    твои данные — в git попадают то�
 - может выдумывать факты — память и `facts.txt` это сильно снижают, но не до нуля;
 - Business-боты работают только в личных чатах, не в группах;
 - история хранится в памяти процесса и сбрасывается при перезапуске.
+
+## Лицензия
+
+Код — [MIT](LICENSE). Веса дообученных моделей в репозиторий не входят и публиковаться не должны (см. «Приватность»).
